@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>URL Shortener Microservice</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+        <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "row">
+                <div class = "col-lg-12">
+                    <h1><a href="https://www.freecodecamp.com" target="blank">Freecodecamp API challenges: "URL Shortener Microservice"</a></h1>
+                    <h5 class="text-right"><em>-- Technologies used: Node, Express, MongoDB, Mongoose, JavaScript, HTML, Bootstrap --</em></h5>
+                    <h4 class="list-group-item-heading">User Stories to implement:</h4>
+                    <blockquote>
+                        <ul class = "list-group">
+                            <a href="#" class="list-group-item list-group-item-success">I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</a>
+                            <a href="#" class="list-group-item list-group-item-success">If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</a>
+                            <a href="#" class="list-group-item list-group-item-success">When I visit that shortened URL, it will redirect me to my original link.</a>
+                        </ul>
+                    </blockquote>
+                
+                </div>
+            </div>
+            <div class = "row text-center form">
+                <div class = "col-lg-12">
+                    <h4>Please, enter your query in the box bellow</h4>
+                    <form action="/new" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="originalUrl" placeholder="enter URL here">
+                        </div>
+                        <button type="submit" class="btn btn-info">Get Short URL!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                    <h4>Usage:</h4>
+                    <ul>
+                        <li><small>After submitting a valid URL to the form, you will receive a JSON output containing original and shortened URLs</small></li>
+                        <li><code>https://url-shortener-microservice-villian79.c9users.io/new/[URL]</code>
+                            <small>After replacing [URL] with a valid URL, you will receive a JSON output containing original and shortened URLs</small>
+                        </li>
+                        <li><code>https://url-shortener-microservice-villian79.c9users.io/[shortURL]</code>
+                            <small>After replacing [shortURL] with a number, you will be redirected to the original link if it exits on WWW</small>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                 <footer>
+                    <p><a href="https://github.com/Villian79/URL-Shortener-Microservice.git" target="blank"><i class="fa fa-github fa-2x"></i> Find this project on GitHub</a></p>
+                    <p>Created by: Igor Vilinchuk</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

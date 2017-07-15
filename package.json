@@ -1,0 +1,27 @@
+{
+  "name": "url_shortener_microservice",
+  "version": "1.0.0",
+  "description": "Freecodecam API challenges",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Villian79/URL-Shortener-Microservice.git"
+  },
+  "author": "Igor Vilinchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Villian79/URL-Shortener-Microservice/issues"
+  },
+  "homepage": "https://github.com/Villian79/URL-Shortener-Microservice#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
