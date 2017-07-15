@@ -7,9 +7,10 @@ const shortUrl      = require('./models/shortUrl');
 
 app.set('view engine', 'ejs');
 
-//mongoose.connect('mongodb://localhost/shortUrls');
-mongoose.connect('mongodb://ivilinchuk:igorito@ds153400.mlab.com:53400/url_shortener_microservice');
-//mongodb://ivilinchuk:igorito@ds153400.mlab.com:53400/url_shortener_microservice
+
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect('mongodb://ivilinchuk:igorito@ds153400.mlab.com:53400/url_shortener_microservice');
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
