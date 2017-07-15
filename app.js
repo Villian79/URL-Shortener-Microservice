@@ -7,16 +7,13 @@ const shortUrl      = require('./models/shortUrl');
 
 app.set('view engine', 'ejs');
 
-
-mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect('mongodb://ivilinchuk:igorito@ds153400.mlab.com:53400/url_shortener_microservice');
-
+var url = (process.env.DATABASEURL || 'mongodb://localhost/shortUrls');
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + "/public"));
-
 
 //INDEX Route
 app.get('/', (req, res)=>{
@@ -60,7 +57,7 @@ app.get('/new/:urlToShorten(*)', (req, res)=>{
     else{
             data = new shortUrl({
             originalUrl: urlToShorten,
-            shorterUrl: 'Invalid origial URL'
+            shorterUrl: 'Invalid original URL'
         });
        return res.json(data);
     }
