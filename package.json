@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Freecodecam API challenges",
   "main": "app.js",
+  "engines": {
+    "node": "4.7.3"
+  }
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
